@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('/' , 'ReviewController@index')->name('index');
+
 Auth::routes();
 
-Route::get('/' , 'ReviewController@index')->name('index');
+Route::get('/review', 'ReviewController@create')->name('create');
 
 Route::get('/home', 'HomeController@index')->name('home');
